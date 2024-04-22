@@ -9,11 +9,14 @@ import 'package:ourlibs/app/data/provider/api_provider.dart';
 import 'package:ourlibs/app/data/provider/storage_provider.dart';
 import 'package:ourlibs/app/modules/detailbook/controllers/detailbook_controller.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ourlibs/app/modules/history/controllers/history_controller.dart';
 
 class PinjamController extends GetxController {
   //TODO: Implement PinjamController
   final DetailbookController detailbookController =
       Get.put(DetailbookController());
+  final HistoryController historyController =
+      Get.put(HistoryController());
   String get username => StorageProvider.read(StorageKey.username);
   int get day => DateTime.now().day;
   int get month => DateTime.now().month;
@@ -75,6 +78,7 @@ class PinjamController extends GetxController {
           sucsesPeminjaman(false);
           return;
         }
+        historyController.getDataHistory();
         sucsesPeminjaman(true);
         Get.snackbar("Information", "Peminjaman Succes",
             backgroundColor: Colors.green);

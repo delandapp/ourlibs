@@ -1,5 +1,6 @@
 import 'package:ourlibs/app/components/buildSection.dart';
 import 'package:ourlibs/app/components/navProfil.dart';
+import 'package:ourlibs/app/components/slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -29,6 +30,7 @@ class HomeView extends GetView<HomeController> {
                 icon: FontAwesomeIcons.bell,
                 subtitle: controller.username.value.toString(),
               ),
+              MySlider(),
               Expanded(
                 child: ColoredBox(color: const Color(0xFFeff0d5) ,child: buildSection(data: state!))
               ),

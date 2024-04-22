@@ -113,7 +113,7 @@ class LoginMobile extends StatelessWidget {
                                     .fontFamily),
                           ),
                           myInput(
-                            validator: validator,
+                            validator: ValidationBuilder().minLength(5).build(),
                             controller: controller,
                             controllerField: controller.username,
                             hintText: "Username",

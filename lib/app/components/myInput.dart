@@ -41,6 +41,7 @@ class myInput extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 fontFamily: GoogleFonts.poppins().fontFamily),
             decoration: InputDecoration(
+              contentPadding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
               prefixIcon: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -104,6 +105,7 @@ class myInput extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 fontFamily: GoogleFonts.poppins().fontFamily),
             decoration: InputDecoration(
+              contentPadding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
               suffixIcon: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
